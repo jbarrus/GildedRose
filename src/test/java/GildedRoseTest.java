@@ -16,7 +16,7 @@ public class GildedRoseTest {
 
 
 	@Test
-	public void testGuildedRoseHasNoItemsInitialially() {
+	public void testGuildedRoseHasNoItemsInitially() {
 		assertThat(rose.getItems(), hasSize(0));
 	}
 
