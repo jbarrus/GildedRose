@@ -1,5 +1,7 @@
 public class BackStageItemUpdater implements ItemUpdater
 {
+    public static final String BACK_STAGE = "Backstage passes to a TAFKAL80ETC concert";
+
     @Override
     public void update(final Item item)
     {
@@ -18,5 +20,11 @@ public class BackStageItemUpdater implements ItemUpdater
 
             item.setQuality(item.getQuality() + qualityChange);
         }
+    }
+
+    @Override
+    public boolean updatesFor(final Item item)
+    {
+        return item.getName().equals(BACK_STAGE);
     }
 }

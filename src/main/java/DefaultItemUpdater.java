@@ -14,4 +14,10 @@ public class DefaultItemUpdater implements ItemUpdater
         item.setQuality(item.getQuality() + qualityChange);
         item.setSellIn(item.getSellIn() - 1);
     }
+
+    @Override
+    public boolean updatesFor(final Item item)
+    {
+        return true;
+    }
 }
