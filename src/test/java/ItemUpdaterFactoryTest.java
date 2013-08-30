@@ -37,4 +37,10 @@ public class ItemUpdaterFactoryTest
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 5);
         assertThat(factory.getUpdater(item), is(instanceOf(BackStageItemUpdater.class)));
     }
+
+    @Test
+    public void testFactoryGiveConjuredUpdaterForConjuredItem() {
+        Item item = new Item("Conjured", 5, 5);
+        assertThat(factory.getUpdater(item), is(instanceOf(ConjuredItemUpdater.class)));
+    }
 }

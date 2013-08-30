@@ -5,7 +5,7 @@ public class ItemUpdaterFactory
 {
     List<ItemUpdater> updaters = Arrays.asList(new ItemUpdater[] {
             new AgedBrieUpdater(), new SulfurusItemUpdater(),
-            new BackStageItemUpdater()
+            new BackStageItemUpdater(), new ConjuredItemUpdater()
 
     });
 
