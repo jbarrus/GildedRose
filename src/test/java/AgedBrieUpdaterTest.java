@@ -15,6 +15,15 @@ public class AgedBrieUpdaterTest
     }
 
     @Test
+    public void testNonExpiredItemSellInDecreasesByOneOnUpdate() {
+        Item item = new Item("test", 5, 4);
+
+        updater.update(item);
+
+        assertThat(item.getSellIn(), equalTo(4));
+    }
+
+    @Test
     public void testAgedBrieQualityIncreaseByOneBeforeSellInDate()
     {
         Item item = new Item("Aged Brie", 5, 0);

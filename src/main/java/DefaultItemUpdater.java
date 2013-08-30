@@ -1,5 +1,6 @@
-public class DefaultItemUpdater
+public class DefaultItemUpdater implements ItemUpdater
 {
+    @Override
     public void update(Item item) {
         int qualityChange = 0;
         if (item.getQuality() > 0) {

@@ -16,6 +16,8 @@ public class GildedRose {
 
     private List<Item> items = new ArrayList<Item>();
 
+    private ItemUpdaterFactory factory = new ItemUpdaterFactory();
+
 	/**
 	 * @param args
 	 */
@@ -47,7 +49,7 @@ public class GildedRose {
 
     private void updateItem(final Item item)
     {
-        DefaultItemUpdater updater = new DefaultItemUpdater();
+        ItemUpdater updater = factory.getUpdater(item);
 
         updater.update(item);
     }

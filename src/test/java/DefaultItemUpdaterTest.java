@@ -6,7 +6,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class DefaultItemUpdaterTest
 {
-    private DefaultItemUpdater updater;
+    private ItemUpdater updater;
 
     @Before
     public void before() {
