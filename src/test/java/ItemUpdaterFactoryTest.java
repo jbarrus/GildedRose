@@ -25,4 +25,16 @@ public class ItemUpdaterFactoryTest
         Item item = new Item("Aged Brie", 5, 5);
         assertThat(factory.getUpdater(item), is(instanceOf(AgedBrieUpdater.class)));
     }
+
+    @Test
+    public void testFactoryGiveSulfurusUpdaterForSulfurusItem() {
+        Item item = new Item("Sulfuras, Hand of Ragnaros", 5, 5);
+        assertThat(factory.getUpdater(item), is(instanceOf(SulfurusItemUpdater.class)));
+    }
+
+    @Test
+    public void testFactoryGiveBackStageUpdaterForBackStageItem() {
+        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 5);
+        assertThat(factory.getUpdater(item), is(instanceOf(BackStageItemUpdater.class)));
+    }
 }
